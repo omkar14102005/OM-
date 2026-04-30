@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>OM Cafe</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+<style>
+:root {
+  --olive: #3B1F0B;
+  --accent: #D4731A;
+  --cream: #FFF5E1;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: var(--olive);
+  color: var(--cream);
+  font-family: 'Poppins', sans-serif;
+  overflow-x: hidden;
+}
+
+/* HERO */
+.hero {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: radial-gradient(circle at center, rgba(212,115,26,0.2), transparent);
+  text-align: center;
+  animation: fadeIn 2s ease-in-out;
+}
+
+.hero h1 {
+  font-family: 'Bebas Neue', cursive;
+  font-size: 5rem;
+  letter-spacing: 4px;
+  color: var(--accent);
+}
+
+.hero p {
+  margin-top: 10px;
+  font-size: 1.2rem;
+  opacity: 0.8;
+}
+
+.hero button {
+  margin-top: 20px;
+  padding: 12px 30px;
+  background: var(--accent);
+  border: none;
+  color: var(--cream);
+  font-weight: bold;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+
+.hero button:hover {
+  transform: scale(1.1);
+}
+
+/* MENU */
+.menu {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.menu h2 {
+  font-family: 'Bebas Neue';
+  font-size: 3rem;
+  margin-bottom: 30px;
+}
+
+.menu-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+}
+
+.item {
+  background: rgba(255,255,255,0.05);
+  padding: 20px;
+  border-left: 4px solid var(--accent);
+  transition: transform 0.3s;
+}
+
+.item:hover {
+  transform: translateY(-8px);
+}
+
+.item h3 {
+  color: var(--accent);
+}
+
+.item span {
+  display: block;
+  margin-top: 10px;
+}
+
+/* TESTIMONIAL */
+.testimonial {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.testimonial h2 {
+  font-family: 'Bebas Neue';
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+
+.testimonial p {
+  max-width: 600px;
+  margin: auto;
+  font-style: italic;
+  opacity: 0.9;
+}
+
+/* CONTACT */
+.contact {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.contact h2 {
+  font-family: 'Bebas Neue';
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+
+form input, form textarea {
+  width: 80%;
+  margin: 10px 0;
+  padding: 10px;
+  border: none;
+  background: rgba(255,255,255,0.1);
+  color: var(--cream);
+}
+
+form button {
+  padding: 10px 25px;
+  background: var(--accent);
+  border: none;
+  color: var(--cream);
+  cursor: pointer;
+}
+
+/* FOOTER */
+footer {
+  padding: 20px;
+  text-align: center;
+  background: rgba(0,0,0,0.2);
+}
+
+/* ANIMATIONS */
+@keyframes fadeIn {
+  from {opacity: 0; transform: translateY(30px);}
+  to {opacity: 1; transform: translateY(0);}
+}
+</style>
+</head>
+
+<body>
+
+<!-- HERO -->
+<section class="hero">
+  <h1>OM CAFE</h1>
+  <p>Street chai. Raw vibes. Nostalgia in every sip.</p>
+  <button>Explore Menu</button>
+</section>
+
+<!-- MENU -->
+<section class="menu">
+  <h2>OUR CHAI MENU</h2>
+  <div class="menu-grid">
+    <div class="item">
+      <h3>Masala Chai</h3>
+      <span>₹20</span>
+    </div>
+    <div class="item">
+      <h3>Ginger Chai</h3>
+      <span>₹25</span>
+    </div>
+    <div class="item">
+      <h3>Elaichi Chai</h3>
+      <span>₹25</span>
+    </div>
+    <div class="item">
+      <h3>Cutting Chai</h3>
+      <span>₹15</span>
+    </div>
+    <div class="item">
+      <h3>Cold Coffee</h3>
+      <span>₹50</span>
+    </div>
+    <div class="item">
+      <h3>Bun Maska</h3>
+      <span>₹30</span>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIAL -->
+<section class="testimonial">
+  <h2>REAL PEOPLE, REAL VIBES</h2>
+  <p>"OM Cafe feels like old streets, late-night talks, and endless chai. Pure nostalgia."</p>
+</section>
+
+<!-- CONTACT -->
+<section class="contact">
+  <h2>DROP A MESSAGE</h2>
+  <form>
+    <input type="text" placeholder="Your Name" required><br>
+    <input type="email" placeholder="Your Email" required><br>
+    <textarea rows="4" placeholder="Your Message"></textarea><br>
+    <button type="submit">Send</button>
+  </form>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <p>© 2026 OM Cafe | Street Brew Culture</p>
+</footer>
+
+</body>
+</html>
